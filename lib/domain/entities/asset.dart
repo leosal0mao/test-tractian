@@ -22,5 +22,14 @@ class Asset with EquatableMixin {
   });
 
   @override
-  List<Object?> get props => throw UnimplementedError();
+  List<Object?> get props => [
+        id,
+        locationId,
+        name,
+        parentId,
+        sensorId,
+        sensorType,
+        gatewayId,
+        status,
+      ];
 }

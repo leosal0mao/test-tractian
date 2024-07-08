@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:test_tractian/domain/entities/location.dart';
 
 class LocationDto extends Location {
@@ -29,11 +28,11 @@ class LocationDto extends Location {
       };
 
 // Domain
-  static LocationDto fromLocation(Location Location) {
+  static LocationDto fromLocation(Location location) {
     return LocationDto(
-      id: Location.id,
-      parentId: Location.parentId,
-      name: Location.name,
+      id: location.id,
+      parentId: location.parentId,
+      name: location.name,
     );
   }
 

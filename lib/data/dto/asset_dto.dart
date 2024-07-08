@@ -44,16 +44,16 @@ class AssetDto extends Asset {
       };
 
 // Domain
-  static AssetDto fromLocation(Asset Asset) {
+  static AssetDto fromLocation(Asset asset) {
     return AssetDto(
-      id: Asset.id,
-      parentId: Asset.parentId,
-      locationId: Asset.locationId,
-      sensorId: Asset.sensorId,
-      gatewayId: Asset.gatewayId,
-      name: Asset.name,
-      status: Asset.status,
-      sensorType: Asset.sensorType,
+      id: asset.id,
+      parentId: asset.parentId,
+      locationId: asset.locationId,
+      sensorId: asset.sensorId,
+      gatewayId: asset.gatewayId,
+      name: asset.name,
+      status: asset.status,
+      sensorType: asset.sensorType,
     );
   }
 
