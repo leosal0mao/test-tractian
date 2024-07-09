@@ -26,5 +26,18 @@ dev_dependencies:
   test: ^1.25.2
 
 flutter:
-
   uses-material-design: true
+  fonts:
+   - family: Roboto
+     fonts:
+      - asset: assets/fonts/Roboto-Black.ttf
+      - asset: assets/fonts/Roboto-Bold.ttf
+      - asset: assets/fonts/Roboto-Light.ttf
+      - asset: assets/fonts/Roboto-Medium.ttf
+      - asset: assets/fonts/Roboto-Regular.ttf
+      - asset: assets/fonts/Roboto-Thin.ttf
+
+  assets:
+    - assets/
+    - assets/icons/
+    - assets/fonts/

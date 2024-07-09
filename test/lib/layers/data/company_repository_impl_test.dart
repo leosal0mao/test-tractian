@@ -1,12 +1,10 @@
 import 'dart:async';
-
 import 'package:mocktail/mocktail.dart';
 import 'package:test/expect.dart';
 import 'package:test/scaffolding.dart';
 import 'package:test_tractian/data/company_repository_impl.dart';
 import 'package:test_tractian/data/dto/company_dto.dart';
 import 'package:test_tractian/domain/entities/company.dart';
-import '../../../fixtures/fixtures.dart';
 import 'mock_api.dart';
 
 class MockCompanyRepositoryImpl extends Mock implements CompanyRepositoryImpl {
