@@ -15,7 +15,7 @@ void main() {
     mockLocationRepository = MockLocationRepository();
     getLocations = GetLocations(
       repository: mockLocationRepository,
-      companyId: '1',
+      // companyId: '1',
     );
   });
 
@@ -29,7 +29,7 @@ void main() {
       when(() => mockLocationRepository.getLocations('1'))
           .thenAnswer((_) async => locations);
 
-      final result = await getLocations.call();
+      final result = await getLocations.call(companyId: '1');
 
       expect(result, equals(locations));
 

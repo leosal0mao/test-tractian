@@ -3,15 +3,13 @@ import '../repositories/asset_repository.dart';
 
 class GetAssets {
   final AssetRepository _repository;
-  final String companyId;
 
   GetAssets({
-    required this.companyId,
     required AssetRepository repository,
   }) : _repository = repository;
 
-  Future<List<Asset>> call() async {
-    final assetList = await _repository.getAssets(companyId);
+  Future<List<Asset>> call({String? companyId}) async {
+    final assetList = await _repository.getAssets(companyId!);
     return assetList;
   }
 }

@@ -14,7 +14,6 @@ void main() {
     mockAssetRepository = MockAssetRepository();
     getAssets = GetAssets(
       repository: mockAssetRepository,
-      companyId: '1',
     );
   });
 
@@ -46,7 +45,7 @@ void main() {
       when(() => mockAssetRepository.getAssets('1'))
           .thenAnswer((_) async => assets);
 
-      final result = await getAssets.call();
+      final result = await getAssets.call(companyId: '1');
 
       expect(result, equals(assets));
 

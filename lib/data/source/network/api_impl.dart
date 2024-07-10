@@ -17,9 +17,8 @@ class ApiImpl implements Api {
   @override
   Future<List<CompanyDto>> loadCompanies() async {
     try {
-      final Response<Map<String, dynamic>> response =
-          await dio.get('$apiUrl$companyEndpoint');
-      final result = (response.data!['results'] as List<dynamic>)
+      final response = await dio.get('$apiUrl$companyEndpoint');
+      final result = (response.data! as List<dynamic>)
           .map((e) => CompanyDto.fromMap(e))
           .toList();
       return result;
